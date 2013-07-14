@@ -1,0 +1,18 @@
+[
+    {
+        "age": 0, 
+        "id": "iris", 
+        "imageUrl": "img/profesionales/iris.jpg", 
+       "places":[{"name":"Clinica Iris Trotti","id":"clinica_iris"}],
+        "name": "Iris Trotti", 
+        "snippet": "Odontología general"
+    }, 
+    {
+        "age": 1, 
+        "id": "mauri", 
+        "imageUrl": "img/profesionales/mauri.jpg", 
+       "places":[{"name":"Clinica Iris Trotti","id":"clinica_iris"}],
+        "name": "Mauricio Cima", 
+        "snippet": "Odontología general, Especialista en Rayos X"
+    }
+]

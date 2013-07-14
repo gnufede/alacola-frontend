@@ -1,0 +1,10 @@
+[
+    {
+        "age": 2, 
+        "id": "bruno", 
+        "imageUrl": "img/profesionales/bruno.jpg", 
+       "places":[{"name":"Clinica Baracco","id":"clinica_baracco"}],
+        "name": "Bruno Baracco", 
+        "snippet": "Odontología general"
+    } 
+]

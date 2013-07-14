@@ -1,0 +1,30 @@
+{
+    "id":"mauri",
+    "name":"Mauricio",
+    "description":"Odontología general, especialista en rayos X",
+    "image":"img/profesionales/mauri.jpg",
+    "places":[
+    {
+        "name":"Clinica Iris Trotti",
+        "id":"clinica_iris"
+    },
+    {
+        "name":"Clinica Iris Trotti",
+        "id":"clinica_iris"
+    }
+    ],
+    "appointments":[
+    {
+        "date": "2013-05-16T15:00:00.556094Z", 
+        "available": "True" 
+    }, 
+    {
+        "date": "2013-05-16T16:00:00.556094Z", 
+        "available": "True" 
+    }, 
+    {
+        "date": "2013-05-16T17:00:00.556094Z", 
+        "available": "False" 
+    }
+]
+}
