@@ -8,9 +8,14 @@
 <button class="btn btn-large ng-class:{'btn-primary':isCollapsed,'btn-danger':!isCollapsed}" ng-click="isCollapsed = !isCollapsed">{{pedirCitaButton()}}</button>
 
 <div collapse="isCollapsed">
+    <div class="span10 well well-large">
     <div class="span5">
         <datepicker ng-model="dt" show-weeks="showWeeks" starting-day="1"  max="'2015-06-22'" date-disabled="disabled(date, mode)" min="minDate"></datepicker>
-        <select class="span12" ng-model="choice" ng-options="value.id as value.name for (key, value) in items" data-style="btn-info" bs-select></select>
+</div>
+    <div class="span6">
+        <select class="span8" ng-model="choice" ng-options="value.id as value.name for (key, value) in items" data-style="btn-info" bs-select></select>
+        <input type="text" id="inputEmail" placeholder="Email">
+        <textarea class="span12" rows="5" placeholder="Comentario"></textarea>
 <button class="btn btn-large btn-primary" ng-click="isCollapsed = !isCollapsed">Confirmar</button>
 
 </div>
