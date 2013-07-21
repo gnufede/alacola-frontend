@@ -10,14 +10,15 @@
 <div collapse="isCollapsed">
     <div class="span5">
         <datepicker ng-model="dt" show-weeks="showWeeks" starting-day="1"  max="'2015-06-22'" date-disabled="disabled(date, mode)" min="minDate"></datepicker>
-        <select class="span6" ng-model="choice" ng-options="value.id as value.name for (key, value) in items" data-style="btn-primary" bs-select></select>
+        <select class="span12" ng-model="choice" ng-options="value.id as value.name for (key, value) in items" data-style="btn-info" bs-select></select>
 <button class="btn btn-large btn-primary" ng-click="isCollapsed = !isCollapsed">Confirmar</button>
 
 </div>
-  <!--timepicker ng-model="dt" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker-->
-<div>
-    <pre>Appointment selected is: {{dt | date:'medium' }} {{choice}}</pre>
 </div>
+  <!--timepicker ng-model="dt" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker-->
+<!--div>
+    <pre>Appointment selected is: {{dt | date:'medium' }} {{choice}}</pre>
+</div-->
 </div>
 
 </div>

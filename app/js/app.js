@@ -4,7 +4,7 @@
 
 //angular.module('alacola', ['ui.bootstrap']);
 
-angular.module('alacola', ['alacolaFilters', 'ui.bootstrap']).
+angular.module('alacola', ['alacolaFilters', 'ui.bootstrap', '$strap.directives']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/places/:placeId', {templateUrl: 'partials/date-list.html',   controller: PlaceListCtrl}).

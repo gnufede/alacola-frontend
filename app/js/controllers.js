@@ -98,6 +98,7 @@ function DateDetailCtrl($scope, $routeParams, $http) {
   $scope.toggleMin = function() {
     $scope.minDate = ( $scope.minDate ) ? null : new Date();
   };
+
 }
 
 
