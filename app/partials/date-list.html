@@ -11,7 +11,7 @@
       </select>
 
     </div>
-    <div class="span10">
+    <div class="span7">
       <!--Body content-->
 
       <ul class="dates">
@@ -19,7 +19,7 @@
           <a href="#/profesionales/{{date.id}}" class="thumb img-circle" ng-style="{'background-image': 'url(' + date.imageUrl + ')'}"></a>
           <a href="#/profesionales/{{date.id}}"><strong>{{date.name}}</strong></a>
           <p>{{date.snippet}}</p>
-          <a href="#/places/{{date.places[0].id}}">{{date.places[0].name}}</a>
+          <a href="#/places/{{date.places[0].id}}"><i class="icon-map-marker"></i> {{date.places[0].name}}</a>
         </li>
       </ul>
 

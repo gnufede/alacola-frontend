@@ -10,7 +10,7 @@ body {
 
 .thumb {
   float: left;
-  margin: -1em 1em 1.5em 0em;
+  margin: -7px 1em 1.5em 7px;
   padding-bottom: 1em;
   height: 100px;
   width: 100px;
@@ -55,8 +55,8 @@ ul.date-thumbs img {
 
 .thumb {
     display: inline-block;
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     padding: 1em;
     border: 0px solid #c99;
     background-position: center center;
@@ -106,4 +106,8 @@ ul.specs dt {
 
 h1 {
   border-bottom: 1px solid gray;
+}
+
+.thumbnail {
+border-radius: 500px 4px 4px 500px;
 }
