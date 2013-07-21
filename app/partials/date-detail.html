@@ -1,19 +1,24 @@
+<div class="row-fluid">
 <div class="bigthumb img-circle date" ng-style="{'background-image': 'url(' + mainImageUrl + ')'}"></div>
 
 <h1>{{date.name}}</h1>
 
 <p>{{date.description}}</p>
 
+<button class="btn btn-large ng-class:{'btn-primary':isCollapsed,'btn-danger':!isCollapsed}" ng-click="isCollapsed = !isCollapsed">{{pedirCitaButton()}}</button>
 
-<div ng-controller="DatepickerDemoCtrl">
-        <datepicker ng-model="dt" show-weeks="showWeeks" starting-day="1"  max="'2015-06-22'"></datepicker>
-            <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-        
-            <button class="btn btn-small btn-inverse" ng-click="today()">Today</button>
-            <button class="btn btn-small btn-success" ng-click="toggleWeeks()">Toggle Weeks</button>
-            <button class="btn btn-small btn-danger" ng-click="clear()">Clear</button>
-            <button class="btn btn-small" ng-click="toggleMin()">After today restriction</button>
+<div collapse="isCollapsed">
+    <div class="span5">
+        <datepicker ng-model="dt" show-weeks="showWeeks" starting-day="1"  max="'2015-06-22'" date-disabled="disabled(date, mode)" min="minDate"></datepicker>
+        <select class="span6" ng-model="choice" ng-options="value.id as value.name for (key, value) in items" data-style="btn-primary" bs-select></select>
+<button class="btn btn-large btn-primary" ng-click="isCollapsed = !isCollapsed">Confirmar</button>
+
+</div>
+  <!--timepicker ng-model="dt" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker-->
+<div>
+    <pre>Appointment selected is: {{dt | date:'medium' }} {{choice}}</pre>
+</div>
 </div>
 
-<ul class="specs">
-</ul>
+</div>
+</div>
