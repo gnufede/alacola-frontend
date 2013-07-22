@@ -3,6 +3,7 @@
     "name":"Iris Trotti",
     "description":"Odontología general",
     "image":"img/profesionales/iris.jpg",
+    "disabledDays":[0,2,3,5,6],
     "places":[
     {
         "name":"Clinica Iris Trotti",

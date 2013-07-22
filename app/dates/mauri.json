@@ -3,6 +3,7 @@
     "name":"Mauricio",
     "description":"Odontología general, especialista en rayos X",
     "image":"img/profesionales/mauri.jpg",
+    "disabledDays":[0],
     "places":[
     {
         "name":"Clinica Iris Trotti",

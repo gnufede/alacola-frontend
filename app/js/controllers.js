@@ -24,14 +24,18 @@ function DateListCtrl($scope, $http) {
 
 
 function DateDetailCtrl($scope, $routeParams, $http) {
+  $scope.isCollapsed = true;
   $http.get('dates/' + $routeParams.dateId + '.json').success(function(data) {
     $scope.date = data;
     $scope.mainImageUrl = data.image;
-  });
+  // Disable weekend selection
+  $scope.disabled = function(date, mode) {
+    return (mode == 'day' && ($scope.date.disabledDays.indexOf(date.getDay())>-1));
+  };
 
   $scope.setImage = function(imageUrl) {
     $scope.mainImageUrl = imageUrl;
-  }
+  };
 
    $scope.today = function() {
     $scope.dt = new Date();
@@ -41,11 +45,10 @@ function DateDetailCtrl($scope, $routeParams, $http) {
   $scope.hstep = 1;
   $scope.mstep = 15;
   $scope.ismeridian = false;
-  $scope.isCollapsed = true;
 
   $scope.pedirCitaButton = function(){
       return ($scope.isCollapsed)? 'Pedir cita':'Cancelar';
-  }
+  };
 
   $scope.items = [
   {"id":"09:00", "name": "09:00"},
@@ -60,25 +63,6 @@ function DateDetailCtrl($scope, $routeParams, $http) {
   {"id":"13:30", "name": "13:30"}
       ];
 
-  $scope.atems =  [
-     "09:00",
-     "09:30",
-     "10:00",
-     "10:30",
-     "11:00",
-     "11:30",
-     "12:00",
-     "12:30",
-     "13:00",
-     "13:30",
-     "17:00",
-     "17:30",
-     "18:00",
-     "18:30",
-     "19:00",
-     "19:30"
-      ];
-
   $scope.choice = '10:30';
 
   $scope.showWeeks = false;
@@ -90,14 +74,11 @@ function DateDetailCtrl($scope, $routeParams, $http) {
     $scope.dt = null;
   };
 
-  // Disable weekend selection
-  $scope.disabled = function(date, mode) {
-    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-  };
 
   $scope.toggleMin = function() {
     $scope.minDate = ( $scope.minDate ) ? null : new Date();
   };
+  });
 
 }
 
