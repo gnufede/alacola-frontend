@@ -17,18 +17,27 @@
   	<script src="locale/angular-locale_es-es.js"></script>
   	<script src="js/angular-strap.min.js"></script>
 	<!--script src="locale/i18n_es-es.js"></script-->
+    <script>
+    $(document).ready(function(){
+         $('#profesionales-link').parent().addClass('active');
+         $('a.menuitem').click(function() {
+             $('li.navbaritem.active').removeClass('active');
+             $(this).parent().addClass('active'); // in yourFunctions.js
+         });
+    });
+    </script>
 </head>
 <body style="padding-top:60px;">
 <div class="navbar navbar-inverse navbar-fixed-top">
 <div class="navbar-inner">
 <div class="container-fluid">
-<span class="brand">Alacola</span>
+<a class="brand" href="#/">Alacola</a>
 <form class="navbar-search">
     <input class="search-query" ng-model="query" placeholder="Buscar">
 </form>
 <ul class="nav">
-    <li><a id="profesionales-link" href="#/profesionales"><i class="icon-briefcase icon-white"></i> Profesionales</a></li>
-    <li><a id="clinicas-link" href="#/clinicas"><i class="icon-map-marker icon-white"></i> Clinicas</a></li>
+    <li class="navbaritem"><a id="profesionales-link" href="#/profesionales" class="menuitem" data-id="profesionales-link"><i class="icon-briefcase icon-white"></i> Profesionales</a></li>
+    <li class="navbaritem"><a id="clinicas-link" href="#/clinicas" class="menuitem" data-id="clinicas-link"><i class="icon-map-marker icon-white"></i> Clinicas</a></li>
 </ul>
 </div>
 </div>
